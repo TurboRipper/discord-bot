@@ -1,3 +1,5 @@
+const { sendWelcome } = require('./welcome');
+
 const { handleAutoMod, handleModCommands } = require('./automod');
 require('dotenv').config();
 
@@ -17,11 +19,8 @@ client.once('clientReady', (c) => {
 });
 
 // ─── WELCOME NEW MEMBERS ───────────────────────────
-client.on('guildMemberAdd', (member) => {
-  const channel = member.guild.systemChannel;
-  if (channel) {
-    channel.send(`👋 Welcome to **${member.guild.name}**, ${member}! Glad you're here!`);
-  }
+client.on('guildMemberAdd', async (member) => {
+  await sendWelcome(member);
 });
 
 // ─── ALL COMMANDS ──────────────────────────────────
