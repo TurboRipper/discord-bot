@@ -7,7 +7,7 @@ const { EmbedBuilder, PermissionsBitField } = require('discord.js');
 
 // ─── CONFIG ────────────────────────────────────────────────────────────────
 
-const BAD_WORDS = ['Bitch', 'Lawde', 'Fuck You']; // 🔧 Add your words here
+const BAD_WORDS = ['bitch', 'lawde', 'fuck you']; // 🔧 Add your words here
 
 const SPAM_CONFIG = {
   maxMessages: 5,       // Max messages allowed...
