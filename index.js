@@ -1,4 +1,6 @@
+const { handleAutoMod, handleModCommands } = require('./automod');
 require('dotenv').config();
+
 const { Client, GatewayIntentBits, PermissionsBitField, EmbedBuilder } = require('discord.js');
 
 const client = new Client({
@@ -162,6 +164,8 @@ client.on('messageCreate', async (message) => {
       .setFooter({ text: 'Ghost Bot 👻' });
     message.reply({ embeds: [embed] });
   }
+  await handleAutoMod(message);      // ✅ ADD THIS
+  await handleModCommands(message);  // ✅ ADD THIS
 });
 
 client.login(process.env.TOKEN);
