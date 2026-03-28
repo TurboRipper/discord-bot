@@ -158,6 +158,7 @@ client.on('messageCreate', async (message) => {
         { name: '🎮 Fun', value: '`!joke` `!8ball` `!coinflip` `!roll`' },
         { name: '📊 Info', value: '`!serverinfo` `!userinfo @user`' },
         { name: '🛡️ Moderation', value: '`!clear [1-100]` `!kick @user` `!ban @user`' },
+        { name: '⚠️ Auto-Mod', value: '`!warn @user [reason]` `!warns @user` `!clearwarns @user`' }, // ✅ ADD THIS
         { name: '🏓 Basic', value: '`!hello` `!ping` `!help`' }
       )
       .setColor(0x5865F2)
